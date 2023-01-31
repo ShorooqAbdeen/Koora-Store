@@ -3,6 +3,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: Colors.white.withOpacity(0.9),
           appBar: AppBar(
@@ -45,15 +46,10 @@ Widget BuildHeader(BuildContext context)=> DrawerHeader(
       color: Color(0xff1C1C1C)
   ),
   child: ListView(
-    padding: EdgeInsets.symmetric(horizontal: 70),
+    padding: EdgeInsets.only(top: 120,right: 0,left: 0),
     children: [
-      SizedBox(height: 10,),
-      Container(
-        decoration: BoxDecoration(
-          color: Colors.indigo,
-        ),
-      ),
-      SizedBox(height: 10,),
+      SizedBox(height: 30,
+       child: Text("KooraStore@store.com",style: TextStyle(color: Colors.grey),),),
     ],
   ),
 );
