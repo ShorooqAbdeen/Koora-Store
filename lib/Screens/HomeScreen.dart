@@ -9,10 +9,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Icon(Icons.add),
-          backgroundColor: Colors.blue,
+          title: Image.asset("images/pic2.png",width: 200,),
+          backgroundColor: Color(0xff1C1C1C),
           elevation: 5,
           centerTitle: true,
         ),
