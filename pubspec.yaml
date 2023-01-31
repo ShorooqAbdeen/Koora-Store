@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -62,7 +62,20 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/koora_logo.png
-#    - images/a_dot_ham.jpeg
+    - images/CristianoRonaldoT-shirt.png
+    - images/RamosT-shirt.png
+    - images/NeymarT-shirt.png
+    - images/RomarioT-shirt.png
+    - images/UnionExercise.jpg
+    - images/ManchesterExerciseKit.jpg
+    - images/RealMadridExerciseKit.jpg
+    - images/MizunoShoes.png
+    - images/BigSale.png
+    - images/AdidasShoes.jpg
+    - images/NiviaShose.png
+    - images/person.png
+    - images/NikeShoes.jpg
+    - images/BarcelonaExerciseKit.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
