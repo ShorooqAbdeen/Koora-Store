@@ -15,8 +15,11 @@ class _LunchScreenState extends State<LunchScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
-     child:Image.asset("images/koora_logo.png") ,
+    return Container(
+      color: Color(0xff1C1C1C),
+      child: Center(
+       child:Image.asset("images/pic2.png") ,
+      ),
     );
   }
 }
