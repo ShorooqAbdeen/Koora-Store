@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
         home: Scaffold(
           backgroundColor: Colors.white.withOpacity(0.9),
           appBar: AppBar(
-            title: Icon(Icons.add),
             backgroundColor: Color(0xff1C1C1C),
             elevation: 5,
             centerTitle: true,
