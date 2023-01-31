@@ -18,7 +18,7 @@ class _LunchScreenState extends State<LunchScreen> {
     return Container(
       color: Color(0xff1C1C1C),
       child: Center(
-       child:Image.asset("images/koora_logo.png") ,
+       child:Image.asset("images/koora_log.png") ,
       ),
     );
   }
