@@ -37,7 +37,11 @@ class _NavigationDrawersState extends State<NavigationDrawers> {
     );
   }
 }
-Widget BuildHeader(BuildContext context)=> DrawerHeader(
+Widget BuildHeader(BuildContext context)=> SizedBox(
+  height: 250,
+  child:DrawerHeader(
+  margin: EdgeInsets.all(0.0),
+  padding: EdgeInsets.all(0.0),
   decoration: BoxDecoration(
       image: DecorationImage(
         fit: BoxFit.cover,
@@ -46,12 +50,13 @@ Widget BuildHeader(BuildContext context)=> DrawerHeader(
       color: Color(0xff1C1C1C)
   ),
   child: ListView(
-    padding: EdgeInsets.only(top: 120,right: 0,left: 0),
+    padding: EdgeInsets.only(top: 175,),
     children: [
       SizedBox(height: 30,
        child: Text("KooraStore@store.com",style: TextStyle(color: Colors.grey),),),
     ],
   ),
+),
 );
 
 Widget BuildMenuItems(BuildContext context)=> Column(
