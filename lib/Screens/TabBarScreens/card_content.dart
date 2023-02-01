@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
 class CardContent extends StatelessWidget {
 
-  List<CardModel> data;
+  List<CardModel> data=[
+    CardModel("_image", "_descrebtion", "_detailes", "_priceBef", "_priceAft"),
+    CardModel("_image2", "_descrebtion2", "_detailes2", "_priceBef2", "_priceAft2"),
+  ];
   CardContent(this.data);
 
   @override

@@ -12,8 +12,8 @@ class _LunchScreenState extends State<LunchScreen> {
     super.initState();
     Firebase.initializeApp();
     Future.delayed(Duration(seconds: 3),(){
-      String routeName = FirebaseAuthController().isLoggedIn()?"/bottom_screen":"/sign_in_screen";
-      Navigator.pushReplacementNamed(context, routeName);
+      // String routeName = FirebaseAuthController().isLoggedIn()?"/bottom_screen":"/sign_in_screen";
+      Navigator.pushReplacementNamed(context, "/home_screen");
     });
   }
   @override
