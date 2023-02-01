@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
 
@@ -35,92 +36,115 @@ class _SignUpScreenState extends State<SignUpScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsetsDirectional.only(start: 30, end: 30, top: 30,bottom: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 50,
-              ),
-              TextField(
-                keyboardType: TextInputType.emailAddress,
-                controller: _email1,
-                decoration: InputDecoration(
-                  // contentPadding: EdgeInsetsDirectional.only(start: 50),
-                  hintText: "Email Address",
-                  hintStyle: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(
-                      width: 0,
-                      color: Colors.grey,
+          padding: EdgeInsetsDirectional.all(20),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 60,),
+                Image.asset("images/koora_logo_removebg.png"),
+                TextField(
+                  cursorColor: Colors.black,
+                  keyboardType: TextInputType.emailAddress,
+                  controller: _email1,
+                  decoration: InputDecoration(
+                    // contentPadding: EdgeInsetsDirectional.only(start: 50),
+                    labelText: "Email",
+                    hintText: "Username or e-mail",
+                    hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 14
                     ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius:BorderRadius.circular(30),
-                    borderSide: BorderSide(
-                      width: 0,
-                      color:Colors.grey,
-                    ),
-                  ) ,
-                ),
-              ),
-              SizedBox(height: 20,),
-              TextField(
-                obscureText: true,
-                controller: _password1,
-                decoration: InputDecoration(
-                  // contentPadding: EdgeInsetsDirectional.only(start: 50),
-                  hintText: "Password",
-                  hintStyle: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(
-                      width: 0,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius:BorderRadius.circular(30),
-                    borderSide: BorderSide(
-                      width: 0,
-                      color:Colors.grey,
-                    ),
-                  ) ,
-                ),
-              ),
-              SizedBox(height: 20,),
-
-              SizedBox(
-                width: double.infinity,
-                height: 40,
-                child: ElevatedButton(
-                  onPressed: ()async{
-                    await  performCreateAccount();
-                  },
-                  child: Text("done",style: TextStyle(
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
                       color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFecb7bf),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      )
+                    ),
+                    prefixIcon: Icon(FontAwesomeIcons.user, color: Colors.black,size: 15,),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 2,
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 1.5,
+                        color:Colors.black,
+                      ),
+                    ) ,
                   ),
                 ),
-              ),
-            ],
+                SizedBox(height: 20,),
+                TextField(
+                  cursorColor: Colors.black,
+                  keyboardType: TextInputType.emailAddress,
+                  controller: _password1,
+                  decoration: InputDecoration(
+                    // contentPadding: EdgeInsetsDirectional.only(start: 50),
+                    labelText: "Password",
+                    hintText: "password",
+                    hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 14
+                    ),
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    prefixIcon: Icon(Icons.key_outlined, color: Colors.black,size: 15,),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 2,
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 1.5,
+                        color:Colors.black,
+                      ),
+                    ) ,
+                  ),
+                ),
+                SizedBox(height: 30,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MaterialButton(
+                      onPressed: () async{
+                        await performCreateAccount();
+                      },
+                      color: Colors.black,
+                      height: 45,
+                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                      child: Text("Register",style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
+                      ),
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

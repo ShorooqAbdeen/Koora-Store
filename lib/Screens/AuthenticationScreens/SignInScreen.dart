@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignUpScreen.dart';
 import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
@@ -37,115 +38,138 @@ class _SignInScreenState extends State<SignInScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsetsDirectional.only(start: 30, end: 30, top: 30,bottom: 30),
+          padding: EdgeInsetsDirectional.all(20),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 50,
-                ),
+                SizedBox(height: 60,),
+                Image.asset("images/koora_logo_removebg.png"),
                 TextField(
+                  cursorColor: Colors.black,
                   keyboardType: TextInputType.emailAddress,
                   controller: _email,
                   decoration: InputDecoration(
                     // contentPadding: EdgeInsetsDirectional.only(start: 50),
-                    hintText: "Email Address",
+                    labelText: "Email",
+                    hintText: "Username or e-mail",
                     hintStyle: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
                       color: Colors.grey,
+                      fontSize: 14
                     ),
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    prefixIcon: Icon(FontAwesomeIcons.user, color: Colors.black,size: 15,),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
-                        width: 0,
-                        color: Colors.grey,
+                        width: 2,
+                        color: Colors.grey.shade200,
                       ),
                     ),
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius:BorderRadius.circular(30),
+                      borderRadius:BorderRadius.circular(10),
                       borderSide: BorderSide(
-                        width: 0,
-                        color:Colors.grey,
+                        width: 1.5,
+                        color:Colors.black,
                       ),
                     ) ,
                   ),
                 ),
                 SizedBox(height: 20,),
                 TextField(
-                  obscureText: true,
+                  cursorColor: Colors.black,
+                  keyboardType: TextInputType.emailAddress,
                   controller: _password,
                   decoration: InputDecoration(
                     // contentPadding: EdgeInsetsDirectional.only(start: 50),
-                    hintText: "Password",
+                    labelText: "Password",
+                    hintText: "password",
                     hintStyle: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey,
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                        width: 0,
                         color: Colors.grey,
+                        fontSize: 14
+                    ),
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                    prefixIcon: Icon(Icons.key_outlined, color: Colors.black,size: 15,),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 2,
+                        color: Colors.grey.shade200,
                       ),
                     ),
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius:BorderRadius.circular(30),
+                      borderRadius:BorderRadius.circular(10),
                       borderSide: BorderSide(
-                        width: 0,
-                        color:Colors.grey,
+                        width: 1.5,
+                        color:Colors.black,
                       ),
                     ) ,
                   ),
                 ),
-                SizedBox(height: 20,),
-
-                SizedBox(
-                  width: double.infinity,
-                  height: 40,
-                  child: ElevatedButton(
-                    onPressed: () async{
-                      await performLogin();
-                    },
-                    child: Text("Login",style: TextStyle(
+                TextButton(
+                  onPressed: (){},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text("Forget Password?",style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-                    ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFecb7bf),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        )
-                    ),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                      ),),
+                    ],
                   ),
                 ),
-                SizedBox(
-                  height: 15 ,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 40,
-                  child: ElevatedButton(
-                    onPressed: ()async{
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()),);
-                    },
-                    child: Text("dont have account sign UP",style: TextStyle(
+                SizedBox(height: 30,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MaterialButton(
+                        onPressed: () async{
+                          await performLogin();
+                        },
                         color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-                    ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFecb7bf),
+                        height: 45,
+                        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                        child: Text("Login",style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold
+                        ),
+                        ),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        )
-                    ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                  ],
+                ),
+                SizedBox(height: 25 ,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  Text("Don't have an account?",style: TextStyle(color: Colors.grey,fontSize: 14),),
+                  TextButton(
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()),);
+                      },
+                      child: Text("Register",style: TextStyle(color: Colors.blue.shade300,fontSize: 14),),
                   ),
+                    ],
                 ),
               ],
             ),
