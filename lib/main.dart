@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
+import 'package:koora_store/Screens/AuthenticationScreens/SignUpScreen.dart';
 import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
 import 'package:koora_store/Screens/BottomNavigationScreens/CartScreen.dart';
 import 'package:koora_store/Screens/BottomNavigationScreens/NotificationScreen.dart';
@@ -21,6 +23,8 @@ class MainScreen extends StatelessWidget {
         "/notification_screen":(context)=>NotificationScreen(),
         "/cart_screen":(context)=>CartScreen(),
         "/bottom_screen":(context)=>BottomScreen(),
+        "/sign_in_screen":(context)=>SignInScreen(),
+        "/sign_up_screen":(context)=>SignUpScreen(),
       },
     );
   }

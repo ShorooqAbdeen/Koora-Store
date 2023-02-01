@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
 import 'package:koora_store/Screens/DrawerScreens/AccountScreen.dart';
 
+import '../../Controllers/FirebaseAuthController.dart';
 import 'SettingsScreen.dart';
 class DrawerWidget extends StatelessWidget {
   @override
@@ -12,7 +14,6 @@ class NavigationDrawers extends StatefulWidget {
   @override
   State<NavigationDrawers> createState() => _NavigationDrawersState();
 }
-
 class _NavigationDrawersState extends State<NavigationDrawers> {
 
   @override
@@ -91,11 +92,16 @@ Widget BuildMenuItems(BuildContext context)=> Container(
     ListTile(
       leading: Icon(Icons.logout,),
       title: Text("Logout"),
-      onTap: (){},
+      onTap: ()async{
+        await FirebaseAuthController().signOut();
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()),);
+      },
     ),
   ],
 ),
 );
+
+
 
 
 

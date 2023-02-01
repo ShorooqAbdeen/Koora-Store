@@ -1,12 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:koora_store/Screens/HomeScreen.dart';
 import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
 class CardContent extends StatelessWidget {
 
   List<CardModel> data;
-
-
   CardContent(this.data);
 
   @override

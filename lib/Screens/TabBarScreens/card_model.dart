@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 class CardModel{
   String _image;
   String _descrebtion;

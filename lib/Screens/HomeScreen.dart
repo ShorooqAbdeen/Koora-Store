@@ -11,22 +11,25 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
-    with SingleTickerProviderStateMixin {
-  TabController? _tabController;
-    List <Widget>tabBarScreen = [
-    CardContent(CardModel("","","","",""),),
-    // CardContent(CardModel("pic2","Des2","det2","pricebef2","priceafter2")),
-    // CardContent(CardModel("pic3","Des3","det3","pricebef3","priceafter3")),
-    // CardContent(CardModel("pic4","Des4","det4","pricebef4","priceafter4")),
-
-  ];
-
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+    late List<CardModel> list;
+    TabController? _tabController;
+     late List<Widget>tabBarScreen ;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    list =[CardModel("sama","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","",""),CardModel("shorooq","","","","")];
+    tabBarScreen = [
+      CardContent(list),
+      CardContent(list),
+      // CardContent(CardModel("pic2","Des2","det2","pricebef2","priceafter2")),
+      // CardContent(CardModel("pic3","Des3","det3","pricebef3","priceafter3")),
+      // CardContent(CardModel("pic4","Des4","det4","pricebef4","priceafter4")),
+
+    ];
     _tabController = TabController(length: tabBarScreen.length, vsync: this);
+
   }
 
   @override

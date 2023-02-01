@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "339780963283",
+    "project_id": "kooraproject",
+    "storage_bucket": "kooraproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339780963283:android:3b97ab6d51af7559d13d26",
+        "android_client_info": {
+          "package_name": "com.example.koora_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339780963283-fpn6i5q7p9t34j38iud7eubl7dbplke9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfa05FhbtkWgJEoceb-DfZJQK2FLEk5bs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339780963283-fpn6i5q7p9t34j38iud7eubl7dbplke9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
