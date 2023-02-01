@@ -11,6 +11,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Settings"),
           centerTitle: true,
           backgroundColor: Color(0xff1C1C1C),
@@ -20,7 +21,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           child: Column(
             children: [
               SizedBox(height: 50,),
-              Text("Section 1",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold ,fontSize: 17),),
               SizedBox(height: 10,),
               ListTile(
                 leading: Icon(Icons.language_outlined),
@@ -35,9 +35,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 trailing: Icon(Icons.toggle_on_outlined, size:45),
                 onTap: (){},
               ),
-              SizedBox(height: 20,),
-              Text("Section 2",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 17),),
-              SizedBox(height: 20,),
+              Divider(),
               ListTile(
                 leading: Icon(Icons.security_outlined),
                 title: Text("Security"),

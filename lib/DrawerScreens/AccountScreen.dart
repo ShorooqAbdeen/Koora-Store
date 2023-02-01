@@ -23,6 +23,7 @@ class _AccountScreenState extends State<AccountScreen> {
       home: Scaffold(
         backgroundColor: Colors.grey.withOpacity(0.1),
         appBar: AppBar(
+          leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Account"),
           centerTitle: true,
           backgroundColor: Color(0xff1C1C1C),
@@ -39,7 +40,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Column(
                     children: [
                       ListTile(
-                        leading: Icon(Icons.whatsapp_outlined),
+                        leading: Icon(Icons.whatsapp_outlined,color: Colors.green,),
                         title:Text("Whats App",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
@@ -51,7 +52,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(Icons.email_outlined),
+                        leading: Icon(Icons.email_outlined,color:Colors.redAccent,),
                         title:Text("Email",style: TextStyle(color: Colors.black),),
                       ),
                     ],
@@ -65,29 +66,29 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Column(
                     children: [
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.squareInstagram),
+                        leading: Icon(FontAwesomeIcons.squareInstagram,color: Colors.redAccent,),
                         title:Text("Instagram",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.squareTwitter),
+                        leading: Icon(FontAwesomeIcons.squareTwitter,color: Colors.lightBlue,),
                         title:Text("twitter",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.squareSnapchat),
+                        leading: Icon(FontAwesomeIcons.snapchat,color: Colors.yellow,),
                         title:Text("Snapshat",style: TextStyle(color: Colors.black),),
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.tiktok),
+                        leading: Icon(FontAwesomeIcons.tiktok,color: Colors.black,),
                         title:Text("Tiktok",style: TextStyle(color: Colors.black),),
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.facebook),
+                        leading: Icon(FontAwesomeIcons.facebook,color: Colors.indigo,),
                         title:Text("Facebook",style: TextStyle(color: Colors.black),),
                         onTap: (){
                           // _lunchInBrowser(_lunchUrl);
@@ -104,13 +105,13 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Column(
                     children: [
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.paypal),
+                        leading: Icon(FontAwesomeIcons.paypal,color: Colors.indigoAccent,),
                         title:Text("Paypal",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.stripe),
+                        leading: Icon(FontAwesomeIcons.stripe,color: Colors.blue,),
                         title:Text("Strip",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
