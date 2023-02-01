@@ -23,9 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
             centerTitle: true,
           ),
           drawer:DrawerWidget(),
-          body:BodyHome(),
-
-
+          // body:BodyHome(),
         )
     );
   }
