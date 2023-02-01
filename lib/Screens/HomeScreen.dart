@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-
 import '../DrawerScreens/DrawerWidget.dart';
-class HomeScreen extends StatelessWidget {
+
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: Colors.white.withOpacity(0.9),
           appBar: AppBar(
@@ -14,7 +21,8 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           drawer:DrawerWidget(),
-    )
+
+        )
     );
   }
 }
