@@ -78,7 +78,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.squareSnapchat,color: Colors.yellowAccent,),
+                        leading: Icon(FontAwesomeIcons.snapchat,color: Colors.yellow,),
                         title:Text("Snapshat",style: TextStyle(color: Colors.black),),
                       ),
                       Divider(color: Colors.grey,),
