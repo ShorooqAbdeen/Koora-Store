@@ -5,17 +5,28 @@ class NotificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.notifications_active_outlined,size: 70,color: Colors.black,),
-          Text("Shop now to track the status of your order",style: TextStyle(fontSize: 18,color: Colors.grey),
-          )
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+      appBar: AppBar(
+          leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
+          title: Text("Notifications"),
+          centerTitle: true,
+          backgroundColor: Color(0xff1C1C1C),
+        ),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.notifications_active_outlined,size: 70,color: Colors.black,),
+            Text("Shop now to track the status of your order",style: TextStyle(fontSize: 18,color: Colors.grey),
+            )
 
-        ],
+          ],
+        ),
       ),
+    ),
     );
   }
 }

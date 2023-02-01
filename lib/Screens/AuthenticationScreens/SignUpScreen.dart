@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
+import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -139,7 +140,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Future createAccount()async{
     UserCredential? userCredential = await FirebaseAuthController().createAccount(_email1!.text, _password1!.text);
     if(userCredential != null){
-      Navigator.pushReplacementNamed(context, "/sign_in_screen");
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()),);
+
 
     }
   }

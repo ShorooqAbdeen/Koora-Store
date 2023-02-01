@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/NotificationScreen.dart';
 import 'package:koora_store/Screens/DrawerScreens/AccountScreen.dart';
 
 import '../../Controllers/FirebaseAuthController.dart';
@@ -81,7 +82,9 @@ Widget BuildMenuItems(BuildContext context)=> Container(
     ListTile(
       leading: Icon(Icons.notification_add,),
       title: Text("Noficication"),
-      onTap: (){},
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()),);
+      },
     ),
     Divider(color: Colors.black,),
     ListTile(
@@ -94,8 +97,8 @@ Widget BuildMenuItems(BuildContext context)=> Container(
       title: Text("Logout"),
       onTap: ()async{
         await FirebaseAuthController().signOut();
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()),);
-      },
+        // Navigator.popUntil(context, ModalRoute.withName('/sign_in_screen'));
+        Navigator.of(context).pushAndRemoveUntil( MaterialPageRoute(builder: (context)=>SignInScreen() ), (Route route) => false);      },
     ),
   ],
 ),

@@ -20,7 +20,7 @@ class _AccountScreenState extends State<AccountScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey.withOpacity(0.1),
+        backgroundColor: Colors.white70.withOpacity(0.9),
         appBar: AppBar(
           leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Account"),
