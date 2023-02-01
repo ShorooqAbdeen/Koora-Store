@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:koora_store/BottomNavigationScreens/BottomNavagtionScreen.dart';
-import 'package:koora_store/BottomNavigationScreens/CartScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/CartScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/NotificationScreen.dart';
 import 'package:koora_store/Screens/HomeScreen.dart';
 import 'package:koora_store/Screens/LunchScreen.dart';
-import 'package:koora_store/BottomNavigationScreens/NotificationScreen.dart';
 
 void main()=>runApp(MainScreen());
 

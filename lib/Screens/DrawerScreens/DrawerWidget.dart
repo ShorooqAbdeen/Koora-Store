@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koora_store/DrawerScreens/AccountScreen.dart';
+import 'package:koora_store/Screens/DrawerScreens/AccountScreen.dart';
 
 import 'SettingsScreen.dart';
 class DrawerWidget extends StatelessWidget {

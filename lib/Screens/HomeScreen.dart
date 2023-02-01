@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koora_store/DrawerScreens/DrawerWidget.dart';
+import 'package:koora_store/Screens/DrawerScreens/DrawerWidget.dart';
 import 'TabBarScreens/card_content.dart';
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:koora_store/BottomNavigationScreens/CartScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/CartScreen.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/NotificationScreen.dart';
 import 'package:koora_store/Screens/HomeScreen.dart';
-import 'package:koora_store/BottomNavigationScreens/NotificationScreen.dart';
 class BottomScreen extends StatefulWidget {
   const BottomScreen({Key? key}) : super(key: key);
 
