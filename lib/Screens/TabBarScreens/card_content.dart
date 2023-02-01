@@ -1,15 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:koora_store/Screens/HomeScreen.dart';
+import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
 class CardContent extends StatelessWidget {
-  String image;
-  String descrebtion;
-  String detailes;
-  String priceBef;
-  String priceAft;
+
+  List<CardModel> data;
 
 
-  CardContent({this.image="", this.descrebtion="", this.detailes="", this.priceBef="",
-    this.priceAft=""});
+  CardContent(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +33,11 @@ class CardContent extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Image.asset(image,height: 70,),
-                      Text(descrebtion),
-                      Text(detailes),
-                      Text(priceBef),
-                      Text(priceAft)
+                      Image.asset(data.elementAt(index).image,height: 70,),
+                      Text(data.elementAt(index).descrebtion),
+                      Text(data.elementAt(index).detailes),
+                      Text(data.elementAt(index).priceBef),
+                      Text(data.elementAt(index).priceAft)
                     ],
                   ),
                 ),

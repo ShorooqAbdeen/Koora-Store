@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:koora_store/Screens/DrawerScreens/DrawerWidget.dart';
+import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
 import 'TabBarScreens/card_content.dart';
 
 
@@ -13,15 +14,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController? _tabController;
-  List <Widget>_tabBarScreen = [
-    CardContent(image: "images/NeymarT-shirt.png",descrebtion: "des",detailes: "detealis",priceBef: "priceBef",priceAft: "priceAfter"),
+    List <Widget>tabBarScreen = [
+    CardContent(CardModel("","","","",""),),
+    // CardContent(CardModel("pic2","Des2","det2","pricebef2","priceafter2")),
+    // CardContent(CardModel("pic3","Des3","det3","pricebef3","priceafter3")),
+    // CardContent(CardModel("pic4","Des4","det4","pricebef4","priceafter4")),
+
   ];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = TabController(length: _tabBarScreen.length, vsync: this);
+    _tabController = TabController(length: tabBarScreen.length, vsync: this);
   }
 
   @override
@@ -76,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen>
           drawer: DrawerWidget(),
           body: TabBarView(
             controller: _tabController,
-            children: _tabBarScreen,
+            children: tabBarScreen,
           ),
         ));
   }
