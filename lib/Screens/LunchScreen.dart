@@ -9,7 +9,7 @@ class _LunchScreenState extends State<LunchScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2),(){
-    Navigator.pushReplacementNamed(context, "/home_screen");
+    Navigator.pushReplacementNamed(context, "/bottom_screen");
     },
     );
   }
@@ -18,7 +18,7 @@ class _LunchScreenState extends State<LunchScreen> {
     return Container(
       color: Color(0xff1C1C1C),
       child: Center(
-       child:Image.asset("images/koora_log.png") ,
+       child:Image.asset("images/koora_logo.png") ,
       ),
     );
   }
