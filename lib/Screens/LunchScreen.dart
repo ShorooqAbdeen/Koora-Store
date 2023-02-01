@@ -9,7 +9,7 @@ class _LunchScreenState extends State<LunchScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2),(){
-    Navigator.pushReplacementNamed(context, "/home_screen");
+    Navigator.pushReplacementNamed(context, "/bottom_screen");
     },
     );
   }
