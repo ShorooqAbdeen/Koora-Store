@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
 import 'package:koora_store/Screens/DrawerScreens/DrawerWidget.dart';
 import 'package:koora_store/Screens/TabBarScreens/card_lists.dart';
 import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
@@ -78,6 +79,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             ),
           ),
           drawer: DrawerWidget(),
+
           body: TabBarView(
             controller: _tabController,
             children: tabBarScreen,

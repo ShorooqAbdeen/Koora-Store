@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
+import 'package:koora_store/Screens/HomeScreen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -42,7 +43,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 60,),
-                Image.asset("images/koora_logo_removebg.png"),
+                Center(
+                  child: CircleAvatar(
+                    backgroundColor: Colors.black.withOpacity(.8),
+                    radius: 70,
+
+                    child:Image.asset("images/yallow.png") ,
+                  ),
+                ),
+                // Image.asset("images/koora_logo_removebg.png"),
+                SizedBox(height: 30,),
                 TextField(
                   cursorColor: Colors.black,
                   keyboardType: TextInputType.emailAddress,
@@ -58,9 +68,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Colors.grey,
                     ),
-                    prefixIcon: Icon(FontAwesomeIcons.user, color: Colors.black,size: 15,),
+                    prefixIcon: Icon(FontAwesomeIcons.user, color: Colors.grey,size: 15,),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
@@ -83,6 +93,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 SizedBox(height: 20,),
                 TextField(
+                  obscureText: true,
                   cursorColor: Colors.black,
                   keyboardType: TextInputType.emailAddress,
                   controller: _password1,
@@ -97,9 +108,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     labelStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Colors.grey,
                     ),
-                    prefixIcon: Icon(Icons.key_outlined, color: Colors.black,size: 15,),
+                    prefixIcon: Icon(Icons.key_outlined, color: Colors.grey,size: 15,),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
@@ -120,7 +131,47 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ) ,
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(height: 20,),
+                TextField(
+                  obscureText: true,
+                  cursorColor: Colors.black,
+                  keyboardType: TextInputType.emailAddress,
+                  // controller: _password1,
+                  decoration: InputDecoration(
+                    // contentPadding: EdgeInsetsDirectional.only(start: 50),
+                    labelText: "confirm Password",
+                    hintText: "confirm Password",
+                    hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 14
+                    ),
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey,
+                    ),
+                    prefixIcon: Icon(Icons.key_outlined, color: Colors.grey,size: 15,),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 2,
+                        color: Colors.grey.shade200,
+                      ),
+                    ),
+                    floatingLabelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                        width: 1.5,
+                        color:Colors.black,
+                      ),
+                    ) ,
+                  ),
+                ),
+                SizedBox(height: 40,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -128,12 +179,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       onPressed: () async{
                         await performCreateAccount();
                       },
-                      color: Colors.black,
+                      color: Colors.black.withOpacity(.7),
                       height: 45,
-                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 140),
                       child: Text("Register",style: TextStyle(
-                          color: Colors.white70,
-                          fontSize: 16,
+                          color: Colors.yellow,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold
                       ),
                       ),
@@ -143,6 +194,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ],
                 ),
+                SizedBox(height: 20,),
+                // TextButton(
+                //   onPressed: (){
+                //     Navigator.pushReplacementNamed(context, "/sign_in_screen");
+                //   },
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.end,
+                //     children: [
+                //       Text("S͟i͟g͟n͟ i͟n͟ ",style: TextStyle(
+                //         color: Colors.blue.shade400,
+                //         fontSize: 17,
+                //         fontWeight: FontWeight.bold,
+                //       ),),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
           ),
@@ -164,7 +231,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Future createAccount()async{
     UserCredential? userCredential = await FirebaseAuthController().createAccount(_email1!.text, _password1!.text);
     if(userCredential != null){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()),);
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()),);
 
 
     }

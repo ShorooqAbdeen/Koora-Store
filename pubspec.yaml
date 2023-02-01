@@ -74,6 +74,7 @@ flutter:
     - images/AdidasShoes.jpg
     - images/BarcelonaExerciseKit.jpg
     - images/BigSale.png
+    - images/yallow.png
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
