@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         width: 2,
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                       ),
                     ),
                     floatingLabelStyle: TextStyle(
@@ -115,7 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         width: 2,
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                       ),
                     ),
                     floatingLabelStyle: TextStyle(
@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         width: 2,
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade500,
                       ),
                     ),
                     floatingLabelStyle: TextStyle(
