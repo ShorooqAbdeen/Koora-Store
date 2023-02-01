@@ -42,7 +42,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 60,),
+                SizedBox(height: 150,),
                 Center(
                   child: CircleAvatar(
                     backgroundColor: Colors.black.withOpacity(.8),
@@ -233,11 +233,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if(userCredential != null){
       Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()),);
 
-
     }
   }
-
-
 
 }
 

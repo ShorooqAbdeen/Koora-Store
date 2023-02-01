@@ -43,7 +43,7 @@ Widget BuildHeader(BuildContext context)=> SizedBox(
           fit: BoxFit.cover,
           image:AssetImage("images/koora_logo.png"),
         ),
-        color: Color(0xff1C1C1C)
+        color: Colors.black.withOpacity(.7),
     ),
     child: ListView(
       padding: EdgeInsets.only(top: 110,bottom: 110,left: 70),

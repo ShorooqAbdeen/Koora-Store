@@ -25,7 +25,7 @@ class _AccountScreenState extends State<AccountScreen> {
           leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Account"),
           centerTitle: true,
-          backgroundColor: Color(0xff1C1C1C),
+          backgroundColor:Colors.black.withOpacity(.7),
         ),
         body: Padding(
           padding:  EdgeInsets.only(bottom: 20,top: 30),

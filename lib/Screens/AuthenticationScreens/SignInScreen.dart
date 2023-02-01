@@ -43,7 +43,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 60,),
+                SizedBox(height: 150,),
                 Center(
                   child: CircleAvatar(
                     backgroundColor: Colors.black.withOpacity(.8),

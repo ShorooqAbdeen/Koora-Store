@@ -12,16 +12,16 @@ class _LunchScreenState extends State<LunchScreen> {
     super.initState();
     Firebase.initializeApp();
     Future.delayed(Duration(seconds: 3),(){
-      String routeName = FirebaseAuthController().isLoggedIn()?"/bottom_screen":"/sign_in_screen";
-      Navigator.pushReplacementNamed(context, "/sign_in_screen");
+      String routeName = FirebaseAuthController().isLoggedIn()?"/home_screen":"/sign_in_screen";
+      Navigator.pushReplacementNamed(context, routeName);
     });
   }
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff1C1C1C),
+      color: Colors.black.withOpacity(.7),
       child: Center(
-       child:Image.asset("images/koora_logo.png") ,
+       child:Image.asset("images/koora_logo_removebg.png") ,
       ),
     );
   }

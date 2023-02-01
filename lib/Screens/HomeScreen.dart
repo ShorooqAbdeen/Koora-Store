@@ -44,10 +44,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           backgroundColor: Colors.white.withOpacity(0.9),
           appBar: AppBar(
             title: Image.asset(
-              "images/koora_logo.png",
+              "images/koora_logo_removebg.png",
               width: 200,
             ),
-            backgroundColor: Color(0xff1C1C1C),
+            backgroundColor: Colors.black.withOpacity(.7),
             elevation: 5,
             centerTitle: true,
             bottom: TabBar(

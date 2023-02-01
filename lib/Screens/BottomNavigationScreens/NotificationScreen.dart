@@ -12,7 +12,7 @@ class NotificationScreen extends StatelessWidget {
           leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Notifications"),
           centerTitle: true,
-          backgroundColor: Color(0xff1C1C1C),
+          backgroundColor: Colors.black.withOpacity(.7),
         ),
       body: Center(
         child: Column(

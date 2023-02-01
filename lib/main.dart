@@ -16,6 +16,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      color: Colors.black.withOpacity(.7),
       initialRoute: "/lunch_screen",
       routes: {
          "/lunch_screen":(context)=>LunchScreen(),
