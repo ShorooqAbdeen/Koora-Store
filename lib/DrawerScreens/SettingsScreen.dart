@@ -11,6 +11,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed: (){Navigator.pop(context);},icon: Icon(Icons.arrow_back),),
           title: Text("Settings"),
           centerTitle: true,
           backgroundColor: Color(0xff1C1C1C),
