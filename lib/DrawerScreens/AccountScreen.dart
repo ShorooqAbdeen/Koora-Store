@@ -105,13 +105,13 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Column(
                     children: [
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.paypal),
+                        leading: Icon(FontAwesomeIcons.paypal,color: Colors.indigoAccent,),
                         title:Text("Paypal",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
                       Divider(color: Colors.grey,),
                       ListTile(
-                        leading: Icon(FontAwesomeIcons.stripe),
+                        leading: Icon(FontAwesomeIcons.stripe,color: Colors.blue,),
                         title:Text("Strip",style: TextStyle(color: Colors.black,fontSize: 17),),
                         onTap: (){},
                       ),
