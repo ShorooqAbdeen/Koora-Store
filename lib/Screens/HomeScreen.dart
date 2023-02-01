@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:koora_store/BottomNavigationScreens/BodyHome.dart';
+import 'package:koora_store/BottomNavigationScreens/BottomNavagtionScreen.dart';
 import '../DrawerScreens/DrawerWidget.dart';
 
 
@@ -21,6 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
             centerTitle: true,
           ),
           drawer:DrawerWidget(),
+          body:BodyHome(),
+
 
         )
     );

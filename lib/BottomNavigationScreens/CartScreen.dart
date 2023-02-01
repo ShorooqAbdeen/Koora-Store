@@ -10,7 +10,7 @@ class CartScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.shopping_cart_outlined,size: 100,color: Colors.blue,),
+          Icon(Icons.shopping_cart_outlined,size: 70,color: Colors.black,),
           Text("This cart is empty",style: TextStyle(fontSize: 18,color: Colors.grey),)
 
         ],

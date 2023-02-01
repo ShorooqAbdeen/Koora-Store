@@ -21,7 +21,7 @@ class _AccountScreenState extends State<AccountScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.9),
+        backgroundColor: Colors.grey.withOpacity(0.1),
         appBar: AppBar(
           title: Text("Account"),
           centerTitle: true,
@@ -35,7 +35,7 @@ class _AccountScreenState extends State<AccountScreen> {
                Text("communication accounts",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
                SizedBox(height: 10,),
                 Container(
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white,
                   child: Column(
                     children: [
                       ListTile(

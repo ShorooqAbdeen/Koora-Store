@@ -27,16 +27,17 @@ class _BottomScreenState extends State<BottomScreen> {
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        unselectedFontSize: 0,
-        selectedFontSize: 1,
+        unselectedFontSize: 12,
+        selectedFontSize: 12,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
         onTap: onTap,
         currentIndex: currentIndex,
-        selectedItemColor:Colors.black ,
+        selectedItemColor:Colors.yellow ,
         unselectedItemColor: Colors.white,
-        showUnselectedLabels: false,
-        elevation: 0,
+        unselectedLabelStyle: TextStyle(color: Colors.white),
+        selectedLabelStyle: TextStyle(fontSize: 16),
+        showUnselectedLabels: true,
         showSelectedLabels: true,
         items: [
           BottomNavigationBarItem(

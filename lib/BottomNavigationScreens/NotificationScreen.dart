@@ -10,7 +10,7 @@ class NotificationScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-     Icon(Icons.notifications_active_outlined,size: 100,color: Colors.blue,),
+          Icon(Icons.notifications_active_outlined,size: 70,color: Colors.black,),
           Text("Shop now to track the status of your order",style: TextStyle(fontSize: 18,color: Colors.grey),
           )
 
