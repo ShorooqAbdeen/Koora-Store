@@ -348,8 +348,7 @@ class BodyHome extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                Container(
+                ),                Container(
                   margin: EdgeInsets.only(
                     left: 10,
                   ),

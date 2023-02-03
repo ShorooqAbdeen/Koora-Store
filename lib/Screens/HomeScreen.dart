@@ -25,6 +25,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     tabBarScreen = [
       CardContent(CardLists.list1),
       CardContent(CardLists.list2),
+      CardContent(CardLists.list3),
+      CardContent(CardLists.list4),
+      CardContent(CardLists.list5),
+      CardContent(CardLists.list6),
+      CardContent(CardLists.list7),
+      CardContent(CardLists.list8),
+
     ];
     _tabController = TabController(length: tabBarScreen.length, vsync: this);
   }

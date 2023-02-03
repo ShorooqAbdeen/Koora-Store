@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -91,6 +91,38 @@ flutter:
     - images/home/germ.jpg
     - images/home/germm.jpg
     - images/home/manshester.jpg
+    - images/home/SaudiFederationExercisesKit.jpeg
+    - images/home/Al-IttihadHomeKit.jpeg
+    - images/home/TheSecondAl-IttihadKit.jpeg
+    - images/home/SaudiTeamKit.jpeg
+    - images/home/neymar.jpg
+    - images/home/Al-HilalHomeShirt.jpeg
+    - images/home/RonaldoT-shirt.jpeg
+    - images/home/ArgentineKit.png
+    - images/home/Al-IttihadKit.png
+    - images/home/Barcelona.png
+    - images/home/Real Madrid.png
+    - images/home/England.png
+    - images/home/France.png
+    - images/home/Germany.png
+    - images/home/Brazil.png
+    - images/home/Portugal.png
+    - images/home/Spain.png
+    - images/home/Black Argentina hoodie.png
+    - images/home/Blue Pullover.png
+    - images/home/Black Pullover.png
+    - images/home/Purple Pullover.png
+    - images/home/White Pullover.png
+    - images/home/Nike Boots.png
+    - images/home/Nike Timpo Boots.png
+    - images/home/Nike Legend.png
+    - images/home/Mizuno Morelia Boots.png
+    - images/home/Mizuno Boots.png
+    - images/home/Copa Sense.png
+    - images/home/Nike Phantom.png
+    - images/home/MORELIA Boots.png
+    - images/home/Nike Jr.Tiempo.png
+    - images/home/Adidas Predator.png
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

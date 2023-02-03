@@ -43,7 +43,7 @@ class CardContent extends StatelessWidget {
                               children: [
                                 Text(data.elementAt(index).descrebtion,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 13),),
                                 SizedBox(height: 10,),
-                                Text(data.elementAt(index).detailes,style:TextStyle(color: Colors.grey.shade600,fontSize:15)),
+                                Text(data.elementAt(index).detailes,style:TextStyle(color: Colors.grey.shade600,fontSize:13)),
                                 SizedBox(height: 35,),
                                 Align(alignment: Alignment.bottomRight,child: Text(data.elementAt(index).priceBef,style: TextStyle(color: Colors.grey,fontSize:11),)),
                                 SizedBox(height: 5,),
