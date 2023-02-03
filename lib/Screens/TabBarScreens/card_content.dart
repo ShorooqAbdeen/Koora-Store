@@ -1,9 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:koora_store/Controllers/FirestoreController.dart';
+import 'package:koora_store/Model/Users.dart';
 import 'package:koora_store/Screens/TabBarScreens/card_model.dart';
 class CardContent extends StatelessWidget {
-
+  static String? id ;
   List<CardModel> data=[
     CardModel("_image", "_descrebtion", "_detailes", "_priceBef", "_priceAft"),
     CardModel("_image2", "_descrebtion2", "_detailes2", "_priceBef2", "_priceAft2"),
@@ -51,17 +54,24 @@ class CardContent extends StatelessWidget {
                         ),
                         Positioned(
                             bottom:0,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),topRight: Radius.circular(10)),
-                                color: Colors.black.withOpacity(0.8),
-                              ),
+                            // child: Container(
+                            //   decoration: BoxDecoration(
+                            //     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),topRight: Radius.circular(10)),
+                            //     color: Colors.black.withOpacity(0.8),
+                            //   ),
                               child: IconButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    print("icons pressed ${id}");
+                                    FirestoreController.fireStoreHelper.SaveUserData(id!,Users(
+                                        name1:data.elementAt(index).descrebtion ,
+                                        name2: data.elementAt(index).detailes,
+                                        price:data.elementAt(index).priceAft),
+                                    );
+                                  },
                                   icon: Icon(Icons.add_shopping_cart_rounded,),
-                                  color: Colors.white,
+                                  color: Colors.black,
                               ),
-                            ),
+                            // ),
                         ),
                       ],
                     ),

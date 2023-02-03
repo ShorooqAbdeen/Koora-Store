@@ -40,7 +40,7 @@ class CartScreen extends StatelessWidget {
                                  Image.asset("images/home/messsi_removepg.png",width: 100,),
                                  SizedBox(width: 15,),
                                  Column(
-                                   crossAxisAlignment: CrossAxisAlignment.end,
+                                   crossAxisAlignment: CrossAxisAlignment.start,
                                    mainAxisAlignment: MainAxisAlignment.center,
                                    children: [
                                      Text("Messi T-shirt",style: TextStyle(fontSize: 15,color: Colors.black.withOpacity(0.7)),),

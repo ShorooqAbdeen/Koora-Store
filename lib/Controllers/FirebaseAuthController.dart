@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:koora_store/Screens/TabBarScreens/card_content.dart';
 
 class FirebaseAuthController{
   FirebaseAuth _auth = FirebaseAuth.instance;
@@ -6,6 +7,8 @@ class FirebaseAuthController{
   Future<UserCredential?> createAccount(String email, String password)async{
       try{
         UserCredential userCredential = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+        String id = userCredential.user!.uid;
+        CardContent.id = id;
         return userCredential;
       }on FirebaseAuthException catch(e){
         print("creatAccount:  code"+ e.message!);
