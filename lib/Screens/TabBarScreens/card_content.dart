@@ -58,7 +58,7 @@ class CardContent extends StatelessWidget {
                               ),
                               child: IconButton(
                                   onPressed: (){},
-                                  icon: Icon(Icons.add_shopping_cart_rounded),
+                                  icon: Icon(Icons.add_shopping_cart_rounded,),
                                   color: Colors.white,
                               ),
                             ),
@@ -71,6 +71,10 @@ class CardContent extends StatelessWidget {
       ),
     );
   }
+
+
+
+
 }
 
 
