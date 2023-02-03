@@ -10,7 +10,7 @@ class FirestoreController{
   final String userCollection = "Users";
 
   Future SaveUserData(String id,Users users) async {
-  await firestore.collection(userCollection).doc(id).set({
+  DocumentReference documentReference=await firestore.collection(userCollection).doc(id).collection("users").add({
   "id": id,
   "name1": users.name1,
   "name2": users.name2,

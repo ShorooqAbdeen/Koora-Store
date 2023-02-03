@@ -28,6 +28,8 @@ class FirebaseAuthController{
  Future<UserCredential?> signIn(String email, String password)async{
       try{
         UserCredential userCredential = await _auth.signInWithEmailAndPassword(email: email, password: password);
+        String id = userCredential.user!.uid;
+        CardContent.id = id;
         return userCredential;
       }on FirebaseAuthException catch(e){
         print("signIn: code"+ e.code);
