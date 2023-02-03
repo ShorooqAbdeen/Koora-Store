@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignUpScreen.dart';
 import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
-import 'package:koora_store/Screens/BottomNavigationScreens/CartScreen.dart';
-import 'package:koora_store/Screens/BottomNavigationScreens/NotificationScreen.dart';
+import 'package:koora_store/Screens/TabBarScreens/CartScreen.dart';
+import 'package:koora_store/Screens/TabBarScreens/NotificationScreen.dart';
 import 'package:koora_store/Screens/HomeScreen.dart';
 import 'package:koora_store/Screens/LunchScreen.dart';
 
