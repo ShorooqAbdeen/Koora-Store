@@ -86,7 +86,7 @@ class BodyHome extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(24),
                               image: DecorationImage(
-                                image: AssetImage('images/NeymarT-shirt.png'),
+                                image: AssetImage('images/neymar.png'),
                                 fit: BoxFit.fill,
                               ))),
                       Container(

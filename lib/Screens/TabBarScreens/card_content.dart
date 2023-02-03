@@ -24,20 +24,33 @@ class CardContent extends StatelessWidget {
             ),
             itemBuilder:(context, index) {
               return Container(
-                height: 500,
-                width: double.infinity,
+                height: 200,
                 child: Card(
+                  elevation: 10,
                   clipBehavior: Clip.antiAlias,
+                    semanticContainer: true,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     children: [
-                      Image.asset(data.elementAt(index).image,height: 70,),
-                      Text(data.elementAt(index).descrebtion),
-                      Text(data.elementAt(index).detailes),
-                      Text(data.elementAt(index).priceBef),
-                      Text(data.elementAt(index).priceAft)
+                      Image.asset(data.elementAt(index).image,height: 80,fit:BoxFit.fitWidth,),
+                      SizedBox(height: 10,),
+                      Align(
+                        alignment: AlignmentDirectional.center,
+                        child: Column(
+                          children: [
+                            Text(data.elementAt(index).descrebtion,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 13),),
+                            SizedBox(height: 5,),
+                            Text(data.elementAt(index).detailes,style:TextStyle(color: Colors.grey.shade600,fontSize:13)),
+                            SizedBox(height: 5,),
+                            Text(data.elementAt(index).priceBef,style: TextStyle(color: Colors.grey,fontSize:10 ),),
+                            SizedBox(height: 5,),
+                            Text(data.elementAt(index).priceAft,style: TextStyle(color: Colors.red,fontSize: 10),)
+                          ],
+                        ),
+                      ),
+
                     ],
                   ),
                 ),

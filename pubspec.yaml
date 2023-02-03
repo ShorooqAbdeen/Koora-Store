@@ -70,11 +70,25 @@ flutter:
   assets:
     - images/koora_logo.png
     - images/koora_logo_removebg.png
-    - images/NeymarT-shirt.png
+    - images/neymar.png
     - images/AdidasShoes.jpg
     - images/BarcelonaExerciseKit.jpg
     - images/BigSale.png
     - images/yallow.png
+    - images/home/teshirt messi.jpg
+    - images/home/Mateus T-shirt 1994.png
+    - images/home/neymar.png
+    - images/home/Pirlo T-shirt 2006.png
+    - images/home/Romario T-shirt 1994.png
+    - images/home/Ronaldo T-shirt 1996.png
+    - images/home/teshirt messi.jpg
+    - images/home/Totti T-shirt 2001.png
+    - images/home/ramous.jpg
+    - images/home/CristianoRonaldoT-shirt.png
+    - images/home/Drukba T-shirt 2012.png
+    - images/home/germ.jpg
+    - images/home/germm.jpg
+    - images/home/manshester.jpg
 #    - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
