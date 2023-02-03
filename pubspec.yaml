@@ -39,6 +39,7 @@ dependencies:
   font_awesome_flutter: ^10.3.0
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
+  flutter_staggered_grid_view: ^0.6.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -70,12 +71,12 @@ flutter:
   assets:
     - images/koora_logo.png
     - images/koora_logo_removebg.png
-    - images/neymar.png
     - images/AdidasShoes.jpg
     - images/BarcelonaExerciseKit.jpg
     - images/BigSale.png
     - images/yallow.png
     - images/home/teshirt messi.jpg
+    - images/home/messsi_removepg.png
     - images/home/Mateus T-shirt 1994.png
     - images/home/neymar.png
     - images/home/Pirlo T-shirt 2006.png

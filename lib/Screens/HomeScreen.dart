@@ -41,11 +41,15 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.white.withOpacity(0.9),
+          backgroundColor: Colors.white,
           appBar: AppBar(
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart_outlined,color: Colors.white,)),
-              IconButton(onPressed: (){}, icon: Icon(Icons.notifications_active_outlined,color: Colors.white,)),
+              IconButton(onPressed: (){
+                 Navigator.pushNamed(context, "/cart_screen");
+                 }, icon: Icon(Icons.shopping_cart_outlined,color: Colors.white,)),
+              IconButton(onPressed: (){
+                Navigator.pushNamed(context, "/notification_screen");
+                }, icon: Icon(Icons.notifications_active_outlined,color: Colors.white,)),
             ],
             title: Image.asset(
               "images/koora_logo_removebg.png",

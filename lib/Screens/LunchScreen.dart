@@ -19,7 +19,7 @@ class _LunchScreenState extends State<LunchScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black.withOpacity(.7),
+      color: Colors.black12,
       child: Center(
        child:Image.asset("images/koora_logo_removebg.png") ,
       ),
