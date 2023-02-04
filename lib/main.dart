@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:koora_store/Provider/UserProvider.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';

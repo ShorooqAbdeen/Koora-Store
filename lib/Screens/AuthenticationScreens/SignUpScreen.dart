@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
@@ -15,6 +16,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController? _email1;
   TextEditingController? _password1;
+  TextEditingController? _confirmPass;
 
   @override
   void initState() {
@@ -22,6 +24,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.initState();
     _email1= TextEditingController();
     _password1 =TextEditingController();
+    _confirmPass = TextEditingController();
   }
 
   @override
@@ -30,6 +33,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.dispose();
     _email1?.dispose();
     _password1?.dispose();
+    _confirmPass?.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -135,6 +139,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextField(
                   obscureText: true,
                   cursorColor: Colors.black,
+                  controller: _confirmPass,
                   keyboardType: TextInputType.emailAddress,
                   // controller: _password1,
                   decoration: InputDecoration(
@@ -223,9 +228,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
   }
   bool checkData(){
-    if(_email1!.text.isNotEmpty && _password1!.text.isNotEmpty){
+    if(_email1!.text.isNotEmpty && _password1!.text.isNotEmpty&& _confirmPass!.text.isNotEmpty){
       return true;
+    }else if(_confirmPass!.text != _password1!.text){
+      Fluttertoast.showToast(
+        msg: "confirm Pass is wrong",
+        toastLength: Toast.LENGTH_SHORT,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+    }else{
+    Fluttertoast.showToast(
+    msg: "Field can't be empty",
+    toastLength: Toast.LENGTH_SHORT,
+    timeInSecForIosWeb: 1,
+    backgroundColor: Colors.black,
+    textColor: Colors.white,
+    fontSize: 16.0,
+    );
     }
+
     return false;
   }
   Future createAccount()async{
