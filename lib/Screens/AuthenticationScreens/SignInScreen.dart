@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:koora_store/Controllers/FirebaseAuthController.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignUpScreen.dart';
-import 'package:koora_store/Screens/BottomNavigationScreens/BottomNavagtionScreen.dart';
 import 'package:koora_store/Screens/HomeScreen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -199,6 +199,14 @@ class _SignInScreenState extends State<SignInScreen> {
     if(_email!.text.isNotEmpty && _password!.text.isNotEmpty){
       return true;
     }
+    Fluttertoast.showToast(
+      msg: "Email or Password can't be empty",
+      toastLength: Toast.LENGTH_SHORT,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.black,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
     return false;
   }
   Future login() async{
