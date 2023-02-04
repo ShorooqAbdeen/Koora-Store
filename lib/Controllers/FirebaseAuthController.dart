@@ -7,8 +7,6 @@ class FirebaseAuthController{
   Future<UserCredential?> createAccount(String email, String password)async{
       try{
         UserCredential userCredential = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-        String id = userCredential.user!.uid;
-        CardContent.id = id;
         return userCredential;
       }on FirebaseAuthException catch(e){
         print("creatAccount:  code"+ e.message!);
@@ -28,8 +26,6 @@ class FirebaseAuthController{
  Future<UserCredential?> signIn(String email, String password)async{
       try{
         UserCredential userCredential = await _auth.signInWithEmailAndPassword(email: email, password: password);
-        String id = userCredential.user!.uid;
-        CardContent.id = id;
         return userCredential;
       }on FirebaseAuthException catch(e){
         print("signIn: code"+ e.code);
@@ -51,5 +47,8 @@ class FirebaseAuthController{
  }
  bool isLoggedIn(){
     return _auth.currentUser != null;
+ }
+ String userId (){
+    return _auth.currentUser!.uid;
  }
 }
