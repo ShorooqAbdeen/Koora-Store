@@ -69,6 +69,7 @@ class CardContent extends StatelessWidget {
                                     onPressed: (){
                                       print("icons pressed ${id}");
                                       FirestoreController.fireStoreHelper.SaveUserData(id!,Users(
+                                          image: data.elementAt(index).image,
                                           name1:data.elementAt(index).descrebtion ,
                                           name2: data.elementAt(index).detailes,
                                           price:data.elementAt(index).priceAft),

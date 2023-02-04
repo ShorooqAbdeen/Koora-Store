@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:koora_store/Provider/UserProvider.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignInScreen.dart';
 import 'package:koora_store/Screens/AuthenticationScreens/SignUpScreen.dart';
 import 'package:koora_store/Screens/TabBarScreens/CartScreen.dart';
 import 'package:koora_store/Screens/TabBarScreens/NotificationScreen.dart';
 import 'package:koora_store/Screens/HomeScreen.dart';
 import 'package:koora_store/Screens/LunchScreen.dart';
+import 'package:provider/provider.dart';
 
-void main()=>runApp(MainScreen());
+void main()=>runApp(
+      MultiProvider(
+       providers: [
+        ChangeNotifierProvider<UsersProvider>(create: (context) {
+          return UsersProvider();
+        }),
+      ],
+       child: MainScreen(),
+      )
+);
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
